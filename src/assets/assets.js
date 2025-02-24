@@ -16,6 +16,8 @@ import instagram_icon from './instagram-icon.webp'
 import youtube_icon from './youtube.svg'
 import pinterest_icon from './pinterest-icon.webp'
 import right_arrow_icon from './arrow-right-icon.png'
+import google_icon from './google-icon.png'
+import facebook_login_icon from './facebook-icon.png'
 
 export const assets = {
     logo_icon,
@@ -35,5 +37,7 @@ export const assets = {
     instagram_icon,
     youtube_icon,
     pinterest_icon,
-    right_arrow_icon
+    right_arrow_icon,
+    google_icon,
+    facebook_login_icon
 }
