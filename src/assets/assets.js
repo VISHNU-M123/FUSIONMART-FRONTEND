@@ -18,6 +18,12 @@ import pinterest_icon from './pinterest-icon.webp'
 import right_arrow_icon from './arrow-right-icon.png'
 import google_icon from './google-icon.png'
 import facebook_login_icon from './facebook-icon.png'
+import shuffle_icon from './shuffle-icon.png'
+import cart_icon_black from './cart-icon-black.png'
+import search_icon_black from './search-icon-black.png'
+import menu_icon_black from './menu-icon-black.png'
+import page_header from './page-header.jpg'
+import arrow_down_icon from './arrow-down-icon.png'
 
 export const assets = {
     logo_icon,
@@ -39,5 +45,11 @@ export const assets = {
     pinterest_icon,
     right_arrow_icon,
     google_icon,
-    facebook_login_icon
+    facebook_login_icon,
+    shuffle_icon,
+    cart_icon_black,
+    search_icon_black,
+    menu_icon_black,
+    page_header,
+    arrow_down_icon
 }

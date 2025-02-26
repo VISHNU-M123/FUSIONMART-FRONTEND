@@ -39,10 +39,10 @@ const Login = () => {
             <p className='text-gray-400'>Password *</p>
             <input className='w-full px-5 py-2 mt-4 bg-gray-50 outline-none border border-gray-200' type="password" placeholder='Password' />
           </div>
-          <div className='flex flex-col sm:flex-row gap-4 md:gap-8 items-center'>
+          <div className='flex flex-col sm:flex-row gap-4 md:gap-5 items-center'>
             <div className='w-full sm:w-auto'>
               <button className='px-5 py-2 gap-3 items-center justify-center flex border border-yellow-600 text-sm text-yellow-600 w-full sm:w-auto'>
-                {isRegister ? 'Sign Up' : 'Log In'}
+                {isRegister ? 'SIGN UP' : 'LOG IN'}
                 <img src={assets.right_arrow_icon} alt="" className='w-4 h-4' />
               </button>
             </div>

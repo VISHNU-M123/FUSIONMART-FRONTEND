@@ -9,10 +9,10 @@ const Navbar = () => {
       </div>
       <div className="hidden lg:block">
         <ul className="flex text-white gap-10">
-            <li className="hover:text-gray-300">Home</li>
-            <li className="hover:text-gray-300">Shop</li>
-            <li className="hover:text-gray-300">Elements</li>
-            <li className="hover:text-gray-300">Buy Molla</li>
+            <li className="hover:text-yellow-600">Home</li>
+            <li className="hover:text-yellow-600">Shop</li>
+            <li className="hover:text-yellow-600">Elements</li>
+            <li className="hover:text-yellow-600">Buy Molla</li>
         </ul>
       </div>
       <div>
