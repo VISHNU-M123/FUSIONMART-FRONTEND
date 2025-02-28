@@ -52,7 +52,7 @@ const BlackFooter = () => {
                 <img src={assets.logo_footer} alt="" />
             </div>
             <div className='mt-5'>
-                <p className='text-neutral-500 leading-7'>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.</p>
+                <p className='text-neutral-500 leading-7 text-sm font-light'>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.</p>
             </div>
             <div className='flex gap-3 mt-5 pt-2'>
                 <img className='h-10 w-10' src={assets.facebook_icon} alt="" />
@@ -64,39 +64,39 @@ const BlackFooter = () => {
         </div>
         <div className='mt-5 pt-5'>
             <div>
-                <h1 className='text-white font-medium'>Useful Links</h1>
+                <h1 className='text-white font-semibold'>Useful Links</h1>
             </div>
-            <div className='mt-5 leading-8'>
-                <p className='text-neutral-500'>About Molla</p>
-                <p className='text-neutral-500'>How to shop on Molla</p>
-                <p className='text-neutral-500'>FAQ</p>
-                <p className='text-neutral-500'>Contact Us</p>
-                <p className='text-neutral-500'>Log in</p>
-            </div>
-        </div>
-        <div className='mt-5 pt-5'>
-            <div>
-                <h1 className='text-white font-medium'>Customer Services</h1>
-            </div>
-            <div className='mt-5 leading-8'>
-                <p className='text-neutral-500'>Payment Methods</p>
-                <p className='text-neutral-500'>Money-back guarantee!</p>
-                <p className='text-neutral-500'>Returns</p>
-                <p className='text-neutral-500'>Shipping</p>
-                <p className='text-neutral-500'>Terms and conditions</p>
-                <p className='text-neutral-500'>Privacy Policy</p>
+            <div className='mt-5 leading-8 text-sm'>
+                <p className='text-neutral-500 font-light'>About Molla</p>
+                <p className='text-neutral-500 font-light'>How to shop on Molla</p>
+                <p className='text-neutral-500 font-light'>FAQ</p>
+                <p className='text-neutral-500 font-light'>Contact Us</p>
+                <p className='text-neutral-500 font-light'>Log in</p>
             </div>
         </div>
         <div className='mt-5 pt-5'>
             <div>
-                <h1 className='text-white font-medium'>My Account</h1>
+                <h1 className='text-white font-semibold'>Customer Services</h1>
             </div>
-            <div className='mt-5 leading-8'>
-                <p className='text-neutral-500'>Sign In</p>
-                <p className='text-neutral-500'>View Cart</p>
-                <p className='text-neutral-500'>My Wishlist</p>
-                <p className='text-neutral-500'>Track My Order</p>
-                <p className='text-neutral-500'>Help</p>
+            <div className='mt-5 leading-8 text-sm'>
+                <p className='text-neutral-500 font-light'>Payment Methods</p>
+                <p className='text-neutral-500 font-light'>Money-back guarantee!</p>
+                <p className='text-neutral-500 font-light'>Returns</p>
+                <p className='text-neutral-500 font-light'>Shipping</p>
+                <p className='text-neutral-500 font-light'>Terms and conditions</p>
+                <p className='text-neutral-500 font-light'>Privacy Policy</p>
+            </div>
+        </div>
+        <div className='mt-5 pt-5'>
+            <div>
+                <h1 className='text-white font-semibold'>My Account</h1>
+            </div>
+            <div className='mt-5 leading-8 text-sm'>
+                <p className='text-neutral-500 font-light'>Sign In</p>
+                <p className='text-neutral-500 font-light'>View Cart</p>
+                <p className='text-neutral-500 font-light'>My Wishlist</p>
+                <p className='text-neutral-500 font-light'>Track My Order</p>
+                <p className='text-neutral-500 font-light'>Help</p>
             </div>
         </div>
       </div>

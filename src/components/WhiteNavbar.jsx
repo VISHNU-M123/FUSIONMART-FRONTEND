@@ -34,10 +34,6 @@ const WhiteNavbar = () => {
         <img src={assets.cart_icon_black} alt="Cart" className='w-6 h-6' />
       </div>
     </div>
-    <div className='flex flex-col justify-center items-center h-40 bg-cover bg-center' style={{backgroundImage: `url(${assets.page_header})`}}>
-      <h1 className='text-zinc-800 text-4xl'>Grid 3 Columns</h1>
-      <h6 className='text-yellow-600 text-xl'>Shop</h6>
-    </div>
     </>
   );
 };

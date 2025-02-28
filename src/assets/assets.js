@@ -24,6 +24,17 @@ import search_icon_black from './search-icon-black.png'
 import menu_icon_black from './menu-icon-black.png'
 import page_header from './page-header.jpg'
 import arrow_down_icon from './arrow-down-icon.png'
+import product_4 from './product-4.jpg'
+import star_icon from './star-icon.png'
+import star_icon_gray from './star-icon-gray.png'
+import product_4_thumb from './product-4-thumb.jpg'
+import product_4_2_thumb from './product-4-2-thumb.jpg'
+import product_4_3_thumb from './product-4-3-thumb.jpg'
+import single_product_small from './single-product-small.jpg'
+import single_product_small_2 from './single-product-small-2.jpg'
+import single_product_small_3 from './single-product-small-3.jpg'
+import single_product_small_4 from './single-product-small-4.jpg'
+import single_product_big from './single-product-big.jpg'
 
 export const assets = {
     logo_icon,
@@ -51,5 +62,16 @@ export const assets = {
     search_icon_black,
     menu_icon_black,
     page_header,
-    arrow_down_icon
+    arrow_down_icon,
+    product_4,
+    star_icon,
+    star_icon_gray,
+    product_4_thumb,
+    product_4_2_thumb,
+    product_4_3_thumb,
+    single_product_small,
+    single_product_small_2,
+    single_product_small_3,
+    single_product_small_4,
+    single_product_big
 }
