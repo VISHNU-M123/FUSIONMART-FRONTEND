@@ -35,6 +35,13 @@ import single_product_small_2 from './single-product-small-2.jpg'
 import single_product_small_3 from './single-product-small-3.jpg'
 import single_product_small_4 from './single-product-small-4.jpg'
 import single_product_big from './single-product-big.jpg'
+import single_product_small_thumb_1 from './single-product-small-thumb-1.jpg'
+import single_product_small_thumb_2 from './single-product-small-thumb-2.jpg'
+import wishlist_yellow_icon from './wishlist-yellow.png'
+import cart_yellow_icon from './cart-yellow.png'
+import shuffle_icon_yellow from './shuffle-icon-yellow.png'
+import arrow_right from './right-arrow-icon.png'
+import arrow_left from './left-arrow-icon.png'
 
 export const assets = {
     logo_icon,
@@ -73,5 +80,12 @@ export const assets = {
     single_product_small_2,
     single_product_small_3,
     single_product_small_4,
-    single_product_big
+    single_product_big,
+    single_product_small_thumb_1,
+    single_product_small_thumb_2,
+    wishlist_yellow_icon,
+    cart_yellow_icon,
+    shuffle_icon_yellow,
+    arrow_right,
+    arrow_left
 }

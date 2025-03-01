@@ -18,7 +18,7 @@ const Home = () => {
         <ProductCard />
       </div>
       <div className="flex justify-center my-8 py-8">
-        <button className="border border-yellow-600 px-5 py-2 text-sm font-light cursor-pointer">VIEW MORE PRODUCTS</button>
+        <button className="border border-yellow-600 px-5 py-2 text-sm font-light cursor-pointer hover:bg-yellow-600 hover:text-white">VIEW MORE PRODUCTS</button>
       </div>
       <BlackFooter />
     </div>

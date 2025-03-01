@@ -55,11 +55,11 @@ const BlackFooter = () => {
                 <p className='text-neutral-500 leading-7 text-sm font-light'>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.</p>
             </div>
             <div className='flex gap-3 mt-5 pt-2'>
-                <img className='h-10 w-10' src={assets.facebook_icon} alt="" />
-                <img className='h-10 w-10' src={assets.twitter_icon} alt="" />
-                <img className='h-10 w-10' src={assets.instagram_icon} alt="" />
-                <img className='h-10 w-10' src={assets.youtube_icon} alt="" />
-                <img className='h-10 w-10' src={assets.pinterest_icon} alt="" />
+                <img className='h-10 w-10 cursor-pointer' src={assets.facebook_icon} alt="" />
+                <img className='h-10 w-10 cursor-pointer' src={assets.twitter_icon} alt="" />
+                <img className='h-10 w-10 cursor-pointer' src={assets.instagram_icon} alt="" />
+                <img className='h-10 w-10 cursor-pointer' src={assets.youtube_icon} alt="" />
+                <img className='h-10 w-10 cursor-pointer' src={assets.pinterest_icon} alt="" />
             </div>
         </div>
         <div className='mt-5 pt-5'>
@@ -67,11 +67,13 @@ const BlackFooter = () => {
                 <h1 className='text-white font-semibold'>Useful Links</h1>
             </div>
             <div className='mt-5 leading-8 text-sm'>
-                <p className='text-neutral-500 font-light'>About Molla</p>
-                <p className='text-neutral-500 font-light'>How to shop on Molla</p>
-                <p className='text-neutral-500 font-light'>FAQ</p>
-                <p className='text-neutral-500 font-light'>Contact Us</p>
-                <p className='text-neutral-500 font-light'>Log in</p>
+              <ul>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>About Molla</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>How to shop on Molla</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>FAQ</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>Contact Us</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>Log in</li>
+              </ul>
             </div>
         </div>
         <div className='mt-5 pt-5'>
@@ -79,12 +81,14 @@ const BlackFooter = () => {
                 <h1 className='text-white font-semibold'>Customer Services</h1>
             </div>
             <div className='mt-5 leading-8 text-sm'>
-                <p className='text-neutral-500 font-light'>Payment Methods</p>
-                <p className='text-neutral-500 font-light'>Money-back guarantee!</p>
-                <p className='text-neutral-500 font-light'>Returns</p>
-                <p className='text-neutral-500 font-light'>Shipping</p>
-                <p className='text-neutral-500 font-light'>Terms and conditions</p>
-                <p className='text-neutral-500 font-light'>Privacy Policy</p>
+              <ul>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>Payment Methods</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>Money-back guarantee!</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>Returns</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>Shipping</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>Terms and conditions</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>Privacy Policy</li>
+              </ul>
             </div>
         </div>
         <div className='mt-5 pt-5'>
@@ -92,11 +96,13 @@ const BlackFooter = () => {
                 <h1 className='text-white font-semibold'>My Account</h1>
             </div>
             <div className='mt-5 leading-8 text-sm'>
-                <p className='text-neutral-500 font-light'>Sign In</p>
-                <p className='text-neutral-500 font-light'>View Cart</p>
-                <p className='text-neutral-500 font-light'>My Wishlist</p>
-                <p className='text-neutral-500 font-light'>Track My Order</p>
-                <p className='text-neutral-500 font-light'>Help</p>
+              <ul>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>Sign In</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>View Cart</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>My Wishlist</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>Track My Order</li>
+                <li className='text-neutral-500 font-light cursor-pointer hover:text-yellow-600'>Help</li>
+              </ul>
             </div>
         </div>
       </div>
