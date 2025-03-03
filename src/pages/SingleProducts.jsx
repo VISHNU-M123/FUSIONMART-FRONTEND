@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import WhiteNavbar from '../components/WhiteNavbar'
 import { assets } from '../assets/assets'
 import WhiteFooter from '../components/WhiteFooter'
 import ProductCardMain from '../components/ProductCardMain'
 
 const SingleProducts = () => {
+
+  const scrollRef = useRef(null);
+
+  const scrollLeft = () => {
+    if(scrollRef.current){
+      scrollRef.current.scrollBy({left: -300, behavior: "smooth"})
+    }
+  }
+
+  const scrollRight = () => {
+    if(scrollRef.current){
+      scrollRef.current.scrollBy({left: 300, behavior: "smooth"})
+    }
+  }
   return (
     <div>
       <WhiteNavbar/>
@@ -145,17 +159,18 @@ const SingleProducts = () => {
         <h1 className='text-2xl font-medium'>You May Also Like</h1>
       </div>
       <div>
-        <div className='flex items-center lg:px-40 px-5 py-5 gap-5'>
-          <div className='w-10 h-10'>
+        <div className='flex items-center lg:px-25 py-5 gap-5'>
+          <div className='w-10 h-10 cursor-pointer flex-shrink-0' onClick={scrollLeft}>
             <img src={assets.arrow_left} alt="" className='w-full'  />
           </div>
-          <div className='flex gap-5'>
-            <ProductCardMain/>
-            <ProductCardMain/>
-            <ProductCardMain/>
-            <ProductCardMain/>
+          <div ref={scrollRef} className='flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory w-full'>
+            {Array(6).fill(null).map((_, index) => (
+            <div key={index} className="snap-start flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+              <ProductCardMain />
+            </div>
+            ))}
           </div>
-          <div className='w-10 h-10'>
+          <div className='w-10 h-10 cursor-pointer flex-shrink-0' onClick={scrollRight}>
             <img src={assets.arrow_right} alt="" className='w-full'  />
           </div>
         </div>

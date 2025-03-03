@@ -3,11 +3,11 @@ import { assets } from '../assets/assets'
 
 const ProductCardMain = () => {
   return (
-    <div>
+    <div className='hover:shadow-lg transition-shadow duration-300'>
       <div className='flex items-center justify-center cursor-pointer'>
         <img src={assets.product_4} alt="" />
       </div>
-      <div className='p-2'>
+      <div className='p-3'>
         <div className='text-center'>
             <p className='text-sm font-light text-gray-600 cursor-pointer'>Women</p>
             <h1 className='cursor-pointer text-gray-800 hover:text-yellow-600'>Brown paperbag waist pencil skirt</h1>
