@@ -42,6 +42,8 @@ import cart_yellow_icon from './cart-yellow.png'
 import shuffle_icon_yellow from './shuffle-icon-yellow.png'
 import arrow_right from './right-arrow-icon.png'
 import arrow_left from './left-arrow-icon.png'
+import close_icon from './close-icon.png'
+import cart_table_product from './cart-table-product.jpg'
 
 export const assets = {
     logo_icon,
@@ -87,5 +89,7 @@ export const assets = {
     cart_yellow_icon,
     shuffle_icon_yellow,
     arrow_right,
-    arrow_left
+    arrow_left,
+    close_icon,
+    cart_table_product
 }
