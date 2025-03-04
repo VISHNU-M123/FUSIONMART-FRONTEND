@@ -59,8 +59,8 @@ const Cart = () => {
                 </div>
 
                 {/* card div */}
-                <div className='lg:col-span-3 border border-gray-400 border-dotted rounded-sm'>
-                    <div className='bg-gray-100 p-8'>
+                <div className='lg:col-span-3'>
+                    <div className='bg-gray-50 p-8 border border-gray-400 border-dotted rounded-sm'>
                         <h3 className='flex items-center pb-4 font-medium'>Cart Total</h3>
                         <hr className='border-gray-300 w-full' />
                         <table className='w-full'>
@@ -111,6 +111,10 @@ const Cart = () => {
                         <div className='flex justify-center mt-4'>
                             <button className='border border-yellow-600 px-5 py-2 text-sm font-light text-yellow-600 cursor-pointer hover:bg-yellow-600 hover:text-white w-full'>PROCEED TO CHECKOUT</button>
                         </div>
+                    </div>
+                    <div className='flex items-center justify-center border border-gray-200 gap-3 mt-8 py-2 bg-gray-50 cursor-pointer'>
+                        <button className='text-yellow-600 text-sm font-light cursor-pointer'>CONTINUE SHOPPING</button>
+                        <img src={assets.reload_icon} alt="" className='w-3.5 h-3' />
                     </div>
                 </div>
             </div>
