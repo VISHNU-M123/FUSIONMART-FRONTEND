@@ -14,12 +14,12 @@ const Cart = () => {
         {/* main container */}
         <div className='lg:px-40 px-5 py-8 w-full'>
             {/* table and card */}
-            <div className='grid grid-cols-1 lg:grid-cols-12'>
+            <div className='grid grid-cols-1 lg:grid-cols-12 gap-5'>
                 {/* table container */}
                 <div className='lg:col-span-9'>
                     {/* table */}
                     <table className='w-full'>
-                        <thead className='border-b border-gray-300'>
+                        <thead className='border-b border-gray-300 hidden md:table-header-group'>
                             <tr>
                                 <th className='text-neutral-500 text-sm font-light text-left pb-3'>Product</th>
                                 <th className='text-neutral-500 text-sm font-light text-left pb-3'>Price</th>
@@ -28,26 +28,26 @@ const Cart = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className='border-b border-gray-300'>
-                                <td className='py-8'>
-                                    <div className='flex gap-8 items-center'>
+                            <tr className='border-b border-gray-300 grid grid-cols-1 gap-4 md:text-start text-center md:table-row'>
+                                <td className='lg:py-8 block md:table-cell'>
+                                    <div className='flex md:gap-8 gap-2 items-center justify-center md:justify-start'>
                                         <figure>
                                             <a href="">
                                                 <img src={assets.cart_table_product} alt="" className='cursor-pointer' />
                                             </a>
                                         </figure>
-                                        <h3 className='cursor-pointer'>Beige knitted elastic runner shoes</h3>
+                                        <h3 className='cursor-pointer text-start'>Beige knitted elastic runner shoes</h3>
                                     </div>
                                 </td>
-                                <td className='py-8'>$84.00</td>
-                                <td className='py-8'>
+                                <td className='md:py-8'>$84.00</td>
+                                <td className='md:py-8'>
                                     <div className='p-1'>
                                         <input type="text" className='outline-none border border-gray-300 w-24 px-2 py-1 text-center' />
                                     </div>
                                 </td>
-                                <td className='text-yellow-600 py-8'>$84.00</td>
-                                <td className='py-8'>
-                                    <button className='flex items-center justify-center'>
+                                <td className='text-yellow-600 md:py-8'>$84.00</td>
+                                <td className='md:py-8'>
+                                    <button className='md:flex items-center justify-center'>
                                         <img src={assets.close_icon} alt="" className='cursor-pointer' />
                                     </button>
                                 </td>
@@ -55,7 +55,22 @@ const Cart = () => {
                         </tbody>
                     </table>
                     {/* coupon code and update cart */}
-                    <div></div>
+                    <div className='flex flex-col md:flex-row justify-between gap-3 my-8'>
+                        <div>
+                            <form action="">
+                                <div className='flex gap-2'>
+                                    <input type="text" placeholder='coupon code' className='bg-gray-50 outline-none border border-yellow-600 py-2 px-5 text-sm font-light text-gray-600' />
+                                    <div className='border border-yellow-600 py-2 px-3'>
+                                        <button><img src={assets.right_arrow_icon} alt="" className='w-3 h-3' /></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <a href="" className='flex items-center gap-2 border border-gray-300 px-5 py-2 w-fit'>
+                            <span className='text-sm font-light text-yellow-600'>UPDATE CART</span>
+                            <img src={assets.reload_icon} alt="" className='w-3 h-3' />
+                        </a>
+                    </div>
                 </div>
 
                 {/* card div */}

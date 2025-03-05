@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import AllProducts from './pages/AllProducts'
 import SingleProducts from './pages/SingleProducts'
 import Cart from './pages/Cart'
+import Wishlist from './pages/Wishlist'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path='/allProducts' element={<AllProducts/>}/>
         <Route path='singleProduct' element={<SingleProducts/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/wishlist' element={<Wishlist/>}/>
       </Routes>
     </div>
   )
