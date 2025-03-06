@@ -25,18 +25,19 @@ const Cart = () => {
                                 <th className='text-neutral-500 text-sm font-light text-left pb-3'>Price</th>
                                 <th className='text-neutral-500 text-sm font-light text-left pb-3'>Quantity</th>
                                 <th className='text-neutral-500 text-sm font-light text-left pb-3'>Total</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr className='border-b border-gray-300 grid grid-cols-1 gap-4 md:text-start text-center md:table-row'>
-                                <td className='lg:py-8 block md:table-cell'>
+                                <td className='md:py-8 block md:table-cell'>
                                     <div className='flex md:gap-8 gap-2 items-center justify-center md:justify-start'>
                                         <figure>
                                             <a href="">
                                                 <img src={assets.cart_table_product} alt="" className='cursor-pointer' />
                                             </a>
                                         </figure>
-                                        <h3 className='cursor-pointer text-start'>Beige knitted elastic runner shoes</h3>
+                                        <h3 className='cursor-pointer text-start hover:text-yellow-600'>Beige knitted elastic runner shoes</h3>
                                     </div>
                                 </td>
                                 <td className='md:py-8'>$84.00</td>
