@@ -61,8 +61,8 @@ const Cart = () => {
                             <form action="">
                                 <div className='flex gap-2'>
                                     <input type="text" placeholder='coupon code' className='bg-gray-50 outline-none border border-yellow-600 py-2 px-5 text-sm font-light text-gray-600' />
-                                    <div className='border border-yellow-600 py-2 px-3'>
-                                        <button><img src={assets.right_arrow_icon} alt="" className='w-3 h-3' /></button>
+                                    <div className='border border-yellow-600 py-2 px-3 cursor-pointer'>
+                                        <button><img src={assets.right_arrow_icon} alt="" className='w-3 h-3 cursor-pointer' /></button>
                                     </div>
                                 </div>
                             </form>

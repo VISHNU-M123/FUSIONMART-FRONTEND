@@ -31,7 +31,7 @@ const WhiteNavbar = () => {
           </button>
         </div>
         <img src={assets.shuffle_icon} alt="Shuffle" className='w-6 h-6' />
-        <img src={assets.cart_icon_black} alt="Cart" className='w-6 h-6' />
+        <img src={assets.cart_icon_black} alt="Cart" className='w-7 h-7' />
       </div>
     </div>
     </>

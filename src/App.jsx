@@ -6,6 +6,7 @@ import AllProducts from './pages/AllProducts'
 import SingleProducts from './pages/SingleProducts'
 import Cart from './pages/Cart'
 import Wishlist from './pages/Wishlist'
+import Checkout from './pages/Checkout'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='singleProduct' element={<SingleProducts/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/wishlist' element={<Wishlist/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
       </Routes>
     </div>
   )
