@@ -45,6 +45,7 @@ import arrow_left from './left-arrow-icon.png'
 import close_icon from './close-icon.png'
 import cart_table_product from './cart-table-product.jpg'
 import reload_icon from './reload-icon.png'
+import payments_summary from './payments-summary.png'
 
 export const assets = {
     logo_icon,
@@ -93,5 +94,6 @@ export const assets = {
     arrow_left,
     close_icon,
     cart_table_product,
-    reload_icon
+    reload_icon,
+    payments_summary
 }

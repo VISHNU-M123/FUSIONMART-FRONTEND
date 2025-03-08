@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import WhiteNavbar from '../components/WhiteNavbar'
 import WhiteFooter from '../components/WhiteFooter'
 import { assets } from '../assets/assets'
 
 const Checkout = () => {
+
+  const [selectedMethod, setSelectedMethod] = useState("")
+  const [isFocused, setIsFocused] = useState(false)
   return (
     <div>
       <WhiteNavbar/>
@@ -16,10 +19,10 @@ const Checkout = () => {
           {/* form and card main */}
           <div className='lg:px-40 px-5 py-8 w-full'>
             {/* coupon code div */}
-            <div>
+            <div className='relative md:w-sm w-full'>
               <form action="">
-                <input type="text" className='outline-none border border-yellow-600 border-dotted rounded-sm px-3 py-2' />
-                <label className='text-gray-600 text-sm'>Have a Coupon ? <span className='text-yellow-600 text-sm'>Click here to enter your code</span></label>
+                <label className={`absolute left-3 top-2.5 text-gray-600 text-sm transition-all duration-300 truncate w-[90%] ${isFocused ? "opacity-0" : "opacity-100"}`}>Have a Coupon ? <span className='text-yellow-600 text-sm'>Click here to enter your code</span></label>
+                <input type="text" className={`outline-none border border-gray-600 ${isFocused ? "border-yellow-600" : "border-gray-600"} border-dotted rounded-sm px-3 py-2 w-full relative`} onFocus={() => setIsFocused(true)} onBlur={(e) => setIsFocused(e.target.value !== "")} />
               </form>
             </div>
 
@@ -90,35 +93,35 @@ const Checkout = () => {
                     <hr className='border-gray-300 w-full' />
                     <table className='w-full'>
                       <thead className='w-full'>
-                        <tr className='flex justify-between w-full py-4'>
-                          <th>Product</th>
-                          <th>Total</th>
+                        <tr>
+                          <th className='font-normal text-left pt-4'>Product</th>
+                          <th className='font-normal text-right pt-4'>Total</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>
-                            <a href="">Beige knitted elastic runner shoes</a>
+                        <tr className='border-b border-gray-200'>
+                          <td className='py-4'>
+                            <a href="" className='text-sm font-light text-gray-500 text-left'>Beige knitted elastic runner shoes</a>
                           </td>
-                          <td>$84.00</td>
+                          <td className='text-sm font-light text-gray-500 text-right py-4'>$84.00</td>
                         </tr>
-                        <tr>
-                          <td>
-                            <a href="">Blue utility pinafore denimdress</a>
+                        <tr className='border-b border-gray-200'>
+                          <td className='py-4'>
+                            <a href="" className='text-sm font-light text-gray-500 text-left'>Blue utility pinafore denimdress</a>
                           </td>
-                          <td>$76.00</td>
+                          <td className='text-sm font-light text-gray-500 text-right py-4'>$76.00</td>
+                        </tr>
+                        <tr className='border-b border-gray-200'>
+                          <td className='font-normal text-left py-6'>Subtotal:</td>
+                          <td className='font-normal text-right py-6'>$160.00</td>
+                        </tr>
+                        <tr className='border-b border-gray-200'>
+                          <td className='text-sm font-light text-gray-500 text-left py-4'>Shipping:</td>
+                          <td className='text-sm font-light text-gray-500 text-right py-4'>Free Shipping</td>
                         </tr>
                         <tr>
-                          <td>Subtotal:</td>
-                          <td>$160.00</td>
-                        </tr>
-                        <tr>
-                          <td>Shipping:</td>
-                          <td>Free Shipping</td>
-                        </tr>
-                        <tr>
-                          <td>Total:</td>
-                          <td>$160.00</td>
+                          <td className='font-normal text-yellow-600 text-left py-6'>Total:</td>
+                          <td className='font-normal text-yellow-600 text-right py-6'>$160.00</td>
                         </tr>
                       </tbody>
                     </table>
@@ -127,19 +130,75 @@ const Checkout = () => {
                     <div>
                       {/* direct bank transfer div */}
                       <div>
-                        <div>
-                          <h2>
-                            <a href="">Direct Bank Transfer</a>
+                        <div className='py-1.5'>
+                          <h2 className='flex items-center gap-3 cursor-pointer' onClick={() => setSelectedMethod(selectedMethod === "bank" ? "null" : "bank")}>
+                            <input type="radio" className='w-4 h-4' checked={selectedMethod === "bank"} />
+                            <a href="" className='font-light text-sm'>Direct bank transfer</a>
                           </h2>
                         </div>
-                        <div>
-                          <div>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account</div>
+                        <div className={`pl-5 my-2 transition-opacity duration-300 ${selectedMethod === "bank" ? "opacity-100" : "opacity-0 hidden"}`}>
+                          <div className='text-gray-400 font-light text-xs pl-2'>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account</div>
+                        </div>
+                      </div>
+
+                      {/* check payment div */}
+                      <div>
+                        <div className='py-1.5'>
+                          <h2 className='flex items-center gap-3 cursor-pointer' onClick={() => setSelectedMethod(selectedMethod === "check" ? "null" : "check")}>
+                            <input type="radio" className='w-4 h-4' checked={selectedMethod === "check"} />
+                            <a href="" className='font-light text-sm'>check Payment</a>
+                          </h2>
+                        </div>
+                        <div className={`pl-5 my-2 transition-opacity duration-300 ${selectedMethod === "check" ? "opacity-100" : "opacity-0 hidden"}`}>
+                          <div className='text-gray-400 font-light text-xs pl-2'>Ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</div>
+                        </div>
+                      </div>
+
+                      {/* cash on delivery */}
+                      <div>
+                        <div className='py-1.5'>
+                          <h2 className='flex items-center gap-3 cursor-pointer' onClick={() => setSelectedMethod(selectedMethod === "cod" ? "null" : "cod")}>
+                            <input type="radio" className='w-4 h-4' checked={selectedMethod === "cod"} />
+                            <a href="" className='font-light text-sm'>Cash on Delivery</a>
+                          </h2>
+                        </div>
+                        <div className={`pl-5 my-2 transition-opacity duration-300 ${selectedMethod === "cod" ? "opacity-100" : "opacity-0 hidden"}`}>
+                          <div className='text-gray-400 font-light text-xs pl-2'>Quisque volutpat mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</div>
+                        </div>
+                      </div>
+
+                      {/* paypal */}
+                      <div>
+                        <div className='py-1.5'>
+                          <h2 className='flex items-center gap-3 cursor-pointer' onClick={() => setSelectedMethod(selectedMethod === "paypal" ? "null" : "paypal")}>
+                            <input type="radio" className='w-4 h-4' checked={selectedMethod === "paypal"} />
+                            <a href="" className='font-light text-sm'>PayPal</a>
+                          </h2>
+                        </div>
+                        <div className={`pl-5 my-2 transition-opacity duration-300 ${selectedMethod === "paypal" ? "opacity-100" : "opacity-0 hidden"}`}>
+                          <div className='text-gray-400 font-light text-xs pl-2'>Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.</div>
+                        </div>
+                      </div>
+
+                      {/* credit card */}
+                      <div>
+                        <div className='py-1.5'>
+                          <h2 className='flex items-center gap-3 cursor-pointer' onClick={() => setSelectedMethod(selectedMethod === "card" ? "null" : "card")}>
+                            <input type="radio" className='w-4 h-4' checked={selectedMethod === "card"} />
+                            <a href="" className='font-light text-sm'>Credit Card</a>
+                          </h2>
+                          <div className="mt-2 pl-5 ">
+                            <img src={assets.payments_summary} alt="Payment Methods" className="w-fit h-auto object-contain pl-2" />
+                          </div>
+                        </div>
+                        <div className={`pl-5 my-2 transition-opacity duration-300 ${selectedMethod === "card" ? "opacity-100" : "opacity-0 hidden"}`}>
+                          <div className='text-gray-400 font-light text-xs pl-2'>Donec nec justo eget felis facilisis fermentum.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Lorem ipsum dolor sit ame.</div>
                         </div>
                       </div>
                     </div>
-                    <button>
-                      <span>Place Order</span>
-                      <span>Proceed to Checkout</span>
+                    <button className='text-yellow-600 text-sm border border-yellow-600 flex items-center justify-center w-full mt-8 py-4 cursor-pointer hover:bg-yellow-600 group relative overflow-hidden'>
+                      <span className='absolute transition-opacity duration-300 group-hover:opacity-0'>Place Order</span>
+                      <span className='text-white absolute opacity-0 transition-opacity duration-300 group-hover:opacity-100'>Proceed to Checkout</span>
                     </button>
                   </div>
                 </div>
