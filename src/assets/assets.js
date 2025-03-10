@@ -46,6 +46,7 @@ import close_icon from './close-icon.png'
 import cart_table_product from './cart-table-product.jpg'
 import reload_icon from './reload-icon.png'
 import payments_summary from './payments-summary.png'
+import edit_icon from './edit-icon.png'
 
 export const assets = {
     logo_icon,
@@ -95,5 +96,6 @@ export const assets = {
     close_icon,
     cart_table_product,
     reload_icon,
-    payments_summary
+    payments_summary,
+    edit_icon
 }
