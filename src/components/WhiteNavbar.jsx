@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { assets } from '../assets/assets';
+import { Link, useLocation } from 'react-router-dom';
 
 const WhiteNavbar = () => {
+
+  const location = useLocation()
+
   return (
     <>
     <div className='flex items-center justify-between bg-white px-5 lg:px-40 py-8'>
@@ -10,12 +14,13 @@ const WhiteNavbar = () => {
       </div>
       <div className='flex gap-10 items-center '>
         <div>
-          <img src={assets.logo_icon} alt="Logo" />
+          <Link to='/'><img src={assets.logo_icon} alt="Logo" className='cursor-pointer' /></Link>
         </div>
         <div className='hidden lg:flex'>
           <ul className='flex gap-8 text-gray-700 font-medium text-sm uppercase'>
-            <li className='cursor-pointer hover:text-yellow-600 transition'>Home</li>
-            <li className='cursor-pointer hover:text-yellow-600 transition'>Shop</li>
+            <Link to='/' className={`cursor-pointer hover:text-yellow-600 transition ${location.pathname === '/' ? "text-yellow-600" : ""}`}>Home</Link>
+            <Link to='/allProducts' className={`cursor-pointer hover:text-yellow-600 transition ${location.pathname === '/allProducts' ? "text-yellow-600" : ""}`}>Shop</Link>
+            <Link to='/userProfile' className={`cursor-pointer hover:text-yellow-600 transition ${location.pathname === '/userProfile' ? "text-yellow-600" : ""}`}>Profile</Link>
             <li className='cursor-pointer hover:text-yellow-600 transition'>Product</li>
             <li className='cursor-pointer hover:text-yellow-600 transition'>Pages</li>
             <li className='cursor-pointer hover:text-yellow-600 transition'>Blog</li>
@@ -30,8 +35,8 @@ const WhiteNavbar = () => {
             <img src={assets.search_icon_black} alt="Search" className='w-5 h-5' />
           </button>
         </div>
-        <img src={assets.shuffle_icon} alt="Shuffle" className='w-6 h-6' />
-        <img src={assets.cart_icon_black} alt="Cart" className='w-7 h-7' />
+        <img src={assets.shuffle_icon} alt="Shuffle" className='w-6 h-6 cursor-pointer' />
+        <Link to='/cart'><img src={assets.cart_icon_black} alt="Cart" className='w-7 h-7 cursor-pointer' /></Link>
       </div>
     </div>
     </>

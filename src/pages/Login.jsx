@@ -22,26 +22,26 @@ const Login = () => {
           {isRegister && (
             <>
               <div>
-                <p className='text-gray-400'>Name *</p>
-                <input className='w-full px-5 py-2 mt-4 bg-gray-50 outline-none border border-gray-200' type="text" placeholder='Name' />
+                <p className='text-gray-400 text-sm font-light'>Name *</p>
+                <input className='w-full px-5 py-2 mt-4 bg-gray-50 outline-none border border-gray-200 text-gray-500 text-sm font-light' type="text" placeholder='Name' />
               </div>
               <div>
-                <p className='text-gray-400'>Mobile Number *</p>
-                <input className='w-full px-5 py-2 mt-4 bg-gray-50 outline-none border border-gray-200' type="tel" placeholder='Mobile Number' />
+                <p className='text-gray-400 text-sm font-light'>Mobile Number *</p>
+                <input className='w-full px-5 py-2 mt-4 bg-gray-50 outline-none border border-gray-200 text-gray-500 text-sm font-light' type="tel" placeholder='Mobile Number' />
               </div>
             </>
           )}
           <div>
-            <p className='text-gray-400'>Email address *</p>
-            <input className='w-full px-5 py-2 mt-4 bg-gray-50 outline-none border border-gray-200' type="email" placeholder='Email' />
+            <p className='text-gray-400 text-sm font-light'>Email address *</p>
+            <input className='w-full px-5 py-2 mt-4 bg-gray-50 outline-none border border-gray-200 text-gray-500 text-sm font-light' type="email" placeholder='Email' />
           </div>
           <div>
-            <p className='text-gray-400'>Password *</p>
-            <input className='w-full px-5 py-2 mt-4 bg-gray-50 outline-none border border-gray-200' type="password" placeholder='Password' />
+            <p className='text-gray-400 text-sm font-light'>Password *</p>
+            <input className='w-full px-5 py-2 mt-4 bg-gray-50 outline-none border border-gray-200 text-gray-500 text-sm font-light' type="password" placeholder='Password' />
           </div>
           <div className='flex flex-col sm:flex-row gap-4 md:gap-5 items-center'>
             <div className='w-full sm:w-auto'>
-              <button className='px-5 py-2 gap-3 items-center justify-center flex border border-yellow-600 text-sm text-yellow-600 w-full sm:w-auto'>
+              <button className='px-5 py-2 gap-3 items-center justify-center flex border border-yellow-600 text-sm text-yellow-600 w-full sm:w-auto cursor-pointer'>
                 {isRegister ? 'SIGN UP' : 'LOG IN'}
                 <img src={assets.right_arrow_icon} alt="" className='w-4 h-4' />
               </button>
@@ -50,28 +50,28 @@ const Login = () => {
               <>
                 <div className="flex items-center gap-2">
                   <input type="checkbox" id="rememberMe" className="w-4 h-4 accent-gray-500" />
-                  <label htmlFor="rememberMe" className="text-gray-400">Remember Me</label>
+                  <label htmlFor="rememberMe" className="text-gray-400 text-sm font-light">Remember Me</label>
                 </div>
                 <div>
-                  <p className='text-gray-400 cursor-pointer'>Forgot Your Password?</p>
+                  <p className='text-gray-400 cursor-pointer text-sm font-light'>Forgot Your Password?</p>
                 </div>
               </>
             )}
             {isRegister && (
               <div>
-                <p onClick={() => setIsRegister(false)} className='text-gray-400 cursor-pointer'>Already have an account ?</p>
+                <p onClick={() => setIsRegister(false)} className='text-gray-400 cursor-pointer text-sm font-light'>Already have an account ?</p>
               </div>
             )}
           </div>
         </form>
         <hr className="my-8 border-t border-neutral-200" />
-        <p className='text-center text-gray-400'>or sign in with</p>
+        <p className='text-center text-gray-400 text-sm font-light'>or sign in with</p>
         <div className='flex flex-col sm:flex-row items-center justify-center gap-5 my-7'>
           <div className='w-full sm:w-auto'>
-            <button className='px-5 py-2 text-gray-500 border border-gray-200 flex gap-2 w-full sm:w-auto items-center justify-center'><img src={assets.google_icon} alt="" /> Login with google</button>
+            <button className='px-5 py-2 text-gray-500 border border-gray-200 flex gap-2 w-full sm:w-auto items-center justify-center text-sm font-light cursor-pointer'><img src={assets.google_icon} alt="" /> Login with google</button>
           </div>
           <div className='w-full sm:w-auto'>
-            <button className='px-5 py-2 text-gray-500 border border-gray-200 flex gap-2 w-full sm:w-auto items-center justify-center'><img src={assets.facebook_login_icon} alt="" /> Login with facebook</button>
+            <button className='px-5 py-2 text-gray-500 border border-gray-200 flex gap-2 w-full sm:w-auto items-center justify-center text-sm font-light cursor-pointer'><img src={assets.facebook_login_icon} alt="" /> Login with facebook</button>
           </div>
         </div>
       </div>

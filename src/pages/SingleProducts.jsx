@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import WhiteNavbar from '../components/WhiteNavbar'
 import { assets } from '../assets/assets'
 import WhiteFooter from '../components/WhiteFooter'
@@ -7,6 +7,7 @@ import ProductCardMain from '../components/ProductCardMain'
 const SingleProducts = () => {
 
   const scrollRef = useRef(null);
+  const [isSelected, setIsSelected] = useState(1)
 
   const scrollLeft = () => {
     if(scrollRef.current){
@@ -31,16 +32,16 @@ const SingleProducts = () => {
             <div className='flex flex-col lg:flex-row gap-2 lg:w-5xl'>
               {/* small img div */}
                 <div className='lg:w-70 lg:h-70 lg:order-1 order-2 flex flex-row lg:flex-col space-y-2.5 gap-2 lg:gap-0 lg:justify-start md:justify-center'>
-                    <div>
+                    <div onClick={() => setIsSelected(1)} className={`cursor-pointer ${isSelected === 1 ? "border border-yellow-600" : ""}`}>
                       <img src={assets.single_product_small} alt="" />
                     </div>
-                    <div>
+                    <div onClick={() => setIsSelected(2)} className={`cursor-pointer ${isSelected === 2 ? "border border-yellow-600" : ""}`}>
                       <img src={assets.single_product_small_2} alt="" />
                     </div>
-                    <div>
+                    <div onClick={() => setIsSelected(3)} className={`cursor-pointer ${isSelected === 3 ? "border border-yellow-600" : ""}`}>
                       <img src={assets.single_product_small_3} alt="" />
                     </div>
-                    <div>
+                    <div onClick={() => setIsSelected(4)} className={`cursor-pointer ${isSelected === 4 ? "border border-yellow-600" : ""}`}>
                       <img src={assets.single_product_small_4} alt="" />
                     </div>
                 </div>
@@ -115,19 +116,19 @@ const SingleProducts = () => {
 
                 {/* butons */}
                 <div className='flex flex-col md:flex-row gap-4 lg:gap-8 lg:items-center md:items-center items-start py-5'>
-                  <div className='flex gap-2 items-center justify-center border border-yellow-600 px-10 py-2'>
+                  <div className='flex gap-2 items-center justify-center border border-yellow-600 px-10 py-2 cursor-pointer'>
                     <div className='h-4 w-4'>
                       <img src={assets.cart_yellow_icon} alt="" />
                     </div>
                     <a className='text-yellow-600 text-sm'>ADD TO CART</a>
                   </div>
-                  <div className='flex gap-2 items-center justify-center'>
+                  <div className='flex gap-2 items-center justify-center cursor-pointer'>
                     <div className='h-4 w-4'>
                       <img src={assets.wishlist_yellow_icon} alt="" />
                     </div>
                     <a className='text-sm text-gray-600'>add to wishlist</a>
                   </div>
-                  <div className='flex gap-2 items-center justify-center'>
+                  <div className='flex gap-2 items-center justify-center cursor-pointer'>
                     <div className='h-4 w-4'>
                       <img src={assets.shuffle_icon_yellow} alt="" />
                     </div>
