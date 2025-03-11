@@ -2,6 +2,7 @@ import React from 'react'
 import WhiteNavbar from '../components/WhiteNavbar'
 import WhiteFooter from '../components/WhiteFooter'
 import { assets } from '../assets/assets'
+import { Link } from 'react-router-dom'
 
 const Wishlist = () => {
   return (
@@ -40,12 +41,15 @@ const Wishlist = () => {
                   <td className='md:py-8'>$84.00</td>
                   <td className='md:py-8'><span className='text-lime-400'>In stock</span></td>
                   <td className='md:py-8'>
+                    <Link to='/cart'>
                     <div className=' flex itmes-center justify-center'>
                       <button className='flex gap-2  border border-yellow-600 px-8 py-2 text-xs font-light text-yellow-600 cursor-pointer'>
                         <img src={assets.cart_yellow_icon} alt="" className='h-4 w-4' />
                         ADD TO CART
                       </button>
                     </div>
+                    </Link>
+                    
                   </td>
                   <td className='md:py-8'>
                     <button className='md:flex items-center justify-center'>

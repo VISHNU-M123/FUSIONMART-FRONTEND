@@ -2,6 +2,7 @@ import React from 'react'
 import WhiteNavbar from '../components/WhiteNavbar'
 import { assets } from '../assets/assets'
 import WhiteFooter from '../components/WhiteFooter'
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
   return (
@@ -125,13 +126,15 @@ const Cart = () => {
                             </tbody>
                         </table>
                         <div className='flex justify-center mt-4'>
-                            <button className='border border-yellow-600 px-5 py-2 text-sm font-light text-yellow-600 cursor-pointer hover:bg-yellow-600 hover:text-white w-full'>PROCEED TO CHECKOUT</button>
+                            <Link to='/checkout'><button className='border border-yellow-600 px-5 py-2 text-sm font-light text-yellow-600 cursor-pointer hover:bg-yellow-600 hover:text-white w-full'>PROCEED TO CHECKOUT</button></Link>
                         </div>
                     </div>
+                    <Link to='/allProducts'>
                     <div className='flex items-center justify-center border border-gray-200 gap-3 mt-8 py-2 bg-gray-50 cursor-pointer'>
                         <button className='text-yellow-600 text-sm font-light cursor-pointer'>CONTINUE SHOPPING</button>
                         <img src={assets.reload_icon} alt="" className='w-3.5 h-3' />
                     </div>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -1,16 +1,17 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { Link } from 'react-router-dom'
 
 const ProductCardMain = () => {
   return (
     <div className='hover:shadow-lg transition-shadow duration-300'>
       <div className='flex items-center justify-center cursor-pointer'>
-        <img src={assets.product_4} alt="" />
+        <Link to='/singleProduct'><img src={assets.product_4} alt="" /></Link>
       </div>
       <div className='p-3'>
         <div className='text-center'>
             <p className='text-sm font-light text-gray-600 cursor-pointer'>Women</p>
-            <h1 className='cursor-pointer text-gray-800 hover:text-yellow-600'>Brown paperbag waist pencil skirt</h1>
+            <Link to='/singleProduct'><h1 className='cursor-pointer text-gray-800 hover:text-yellow-600'>Brown paperbag waist pencil skirt</h1></Link>
             <h1 className='text-yellow-600 cursor-pointer'>$60.00</h1>
         </div>
         <div className='flex flex-col sm:flex-row gap-2 py-2 justify-center items-center'>
